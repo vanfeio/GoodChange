@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>出品する｜【グッチェン】あなたの推し活を応援！グッズ交換サイト</title>
+
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+	<meta name="robots" content="noindex">
+	<meta name="googlebot" content="noindex">
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/colorbox.css">
+
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="/js/script.js"></script>
+	<script type="text/javascript" src="/js/jquery.colorbox-min.js"></script>
+</head>
+
+<body>
+	<header id="header_login"></header>
+	<div id="listhing" class="bg_g">
+		<div class="container">
+			<h3 class="return"><a href="mypage.html">交換アイテムの出品</a></h3>
+			<form action="">
+				<div class="image">
+					<div class="title">商品画像(最大5枚)</div>
+					<div class="image_box">
+						<div class="upload"><img src="img/top_pkg-11.png" alt=""></div>
+						<div class="upload"></div>
+						<div class="upload"></div>
+						<div class="upload"></div>
+						<div class="upload"></div>
+					</div>
+				</div>
+
+				<h4>商品の詳細</h4>
+				<ul>
+					<li>
+						<div class="title required">カテゴリ</div>
+						<a href="content.html" class="select_category lightbox3">カテゴリを選択</a>
+					</li>
+					<li>
+						<div class="title required">商品名</div>
+						<input required type="text" class="textbox_w" placeholder="商品名を入力"/>
+						<div class="count right">0 / 40</div>
+					</li>
+					<li>
+						<div class="title required">入手経路</div>
+						<input required type="text" class="textbox_w" placeholder="入手した経路を入力（例：〇〇年冬季の〇〇イベント）"/>
+						<div class="count right">0 / 40</div>
+					</li>
+					<li>
+						<div class="title">商品説明</div>
+						<textarea cols="50" rows="5" class="textbox_w" placeholder="あなたが出品するアイテムについての詳細情報や、追加で提供できるアイテムなどがあればご記入ください。（例）ラブライブスーパースター オンラインくじです。全９種をコンプリートしているのでお好きなキャラクターをお選びください。"></textarea>
+						<div class="count right">0 / 1000</div>
+					</li>
+					<li>
+						<div class="title">商品の状態<sup>※</sup></div>
+						<div class="pref textbox_w">
+							<select name="商品の状態">
+								<option value="">商品の状態を選択する</option>
+								<option value="1">新品未使用</option>
+								<option value="2">目立った傷や汚れなし</option>
+								<option value="3">傷や汚れあり</option>
+								<option value="3">全体的に状態が悪い</option>
+							  </select>
+						</div>
+					</li>
+				</ul>
+
+				<h4>商品の配送について</h4>
+				<ul>
+					<li>
+						<div class="title">発送方法<sup>※</sup></div>
+						<div class="pref textbox_w">
+							<select name="発送方法">
+								<option value="">発送方法を選択する</option>
+								<option value="1">匿名発送</option>
+								<option value="2">自分で発送</option>
+							  </select>
+						</div>
+						<p class="color_r">グッチェンに在庫を預けて配送を任せることができます。詳しくは<a href="delivery.html" class="links" target="_blank">こちら</a>をご覧ください。</p>
+					</li>
+					<li>
+						<div class="title">発送までの日数<sup>※</sup></div>
+						<div class="pref textbox_w">
+							<select name="発送までの日数を選択">
+								<option value="">発送までの日数を選択する</option>
+								<option value="1">1〜2日</option>
+								<option value="2">2〜3日</option>
+								<option value="2">4〜7日</option>
+							  </select>
+						</div>
+					</li>
+				</ul>
+
+				<p class="center"><a href="" class="links" target="_blank">禁止されている行為及び出品物</a>を必ずご確認ください。 <br>また、<a href="terms.html" class="links" target="_blank">利用規約</a>及び<a href=" porcy.html" class="links" target="_blank">プライバシーポリシー</a>に同意の上、「出品する」ボタンを押してください。</p>
+
+				<button type="button" class="btn_bg_circle_red">交換アイテムを出品する<span>※出品アイテムは他のユーザーに公開されます※</span></button>
+
+				<button type="button" class="btn_line_square_gray">非公開で下書きに保存する</button>
+			</form>
+		</div>
+		<div class="beginner_modal">
+			<div class="modal_container center">
+				<div class="beginner_modal_close icon_close"><img src="img/icon_close.svg" alt="閉じる"></div>
+				<h3>まずは自分のアイテムを<br class="br_sp">出品しましょう！</h3>
+				<p>グッチェンでは、最低一品の<br class="br_sp">アイテム出品が必要です。<br>
+					自分が交換相手に提供できる<br class="br_sp">アイテムを出品してください。</p>
+					<span class="btn_bg_circle_green beginner_modal_close">出品する</span>
+			</div>
+		</div>
+	</div>
+	<footer id="footer"></footer>
+
+	<script>
+		$(function() {
+			$('.lightbox3').colorbox();
+		});
+	</script>
+</body>
+
+
+</html>
