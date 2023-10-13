@@ -11,11 +11,11 @@
 	<meta name="robots" content="noindex">
 	<meta name="googlebot" content="noindex">
 
-	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="./css/style.css">
 	<link rel="stylesheet" href="/css/colorbox.css">
 
 	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-	<script type="text/javascript" src="/js/script.js"></script>
+	<script type="text/javascript" src="./js/script.js"></script>
 	<script type="text/javascript" src="/js/jquery.colorbox-min.js"></script>
 </head>
 
@@ -44,17 +44,18 @@
 					</li>
 					<li>
 						<div class="title required">商品名</div>
-						<input required type="text" class="textbox_w" placeholder="商品名を入力"/>
+						<input required type="text" class="textbox_w" placeholder="商品名を入力" />
 						<div class="count right">0 / 40</div>
 					</li>
 					<li>
 						<div class="title required">入手経路</div>
-						<input required type="text" class="textbox_w" placeholder="入手した経路を入力（例：〇〇年冬季の〇〇イベント）"/>
+						<input required type="text" class="textbox_w" placeholder="入手した経路を入力（例：〇〇年冬季の〇〇イベント）" />
 						<div class="count right">0 / 40</div>
 					</li>
 					<li>
 						<div class="title">商品説明</div>
-						<textarea cols="50" rows="5" class="textbox_w" placeholder="あなたが出品するアイテムについての詳細情報や、追加で提供できるアイテムなどがあればご記入ください。（例）ラブライブスーパースター オンラインくじです。全９種をコンプリートしているのでお好きなキャラクターをお選びください。"></textarea>
+						<textarea cols="50" rows="5" class="textbox_w"
+							placeholder="あなたが出品するアイテムについての詳細情報や、追加で提供できるアイテムなどがあればご記入ください。（例）ラブライブスーパースター オンラインくじです。全９種をコンプリートしているのでお好きなキャラクターをお選びください。"></textarea>
 						<div class="count right">0 / 1000</div>
 					</li>
 					<li>
@@ -66,7 +67,7 @@
 								<option value="2">目立った傷や汚れなし</option>
 								<option value="3">傷や汚れあり</option>
 								<option value="3">全体的に状態が悪い</option>
-							  </select>
+							</select>
 						</div>
 					</li>
 				</ul>
@@ -80,9 +81,10 @@
 								<option value="">発送方法を選択する</option>
 								<option value="1">匿名発送</option>
 								<option value="2">自分で発送</option>
-							  </select>
+							</select>
 						</div>
-						<p class="color_r">グッチェンに在庫を預けて配送を任せることができます。詳しくは<a href="delivery.html" class="links" target="_blank">こちら</a>をご覧ください。</p>
+						<p class="color_r">グッチェンに在庫を預けて配送を任せることができます。詳しくは<a href="delivery.html" class="links"
+								target="_blank">こちら</a>をご覧ください。</p>
 					</li>
 					<li>
 						<div class="title">発送までの日数<sup>※</sup></div>
@@ -92,12 +94,14 @@
 								<option value="1">1〜2日</option>
 								<option value="2">2〜3日</option>
 								<option value="2">4〜7日</option>
-							  </select>
+							</select>
 						</div>
 					</li>
 				</ul>
 
-				<p class="center"><a href="" class="links" target="_blank">禁止されている行為及び出品物</a>を必ずご確認ください。 <br>また、<a href="terms.html" class="links" target="_blank">利用規約</a>及び<a href=" porcy.html" class="links" target="_blank">プライバシーポリシー</a>に同意の上、「出品する」ボタンを押してください。</p>
+				<p class="center"><a href="" class="links" target="_blank">禁止されている行為及び出品物</a>を必ずご確認ください。 <br>また、<a
+						href="terms.html" class="links" target="_blank">利用規約</a>及び<a href=" porcy.html" class="links"
+						target="_blank">プライバシーポリシー</a>に同意の上、「出品する」ボタンを押してください。</p>
 
 				<button type="button" class="btn_bg_circle_red">交換アイテムを出品する<span>※出品アイテムは他のユーザーに公開されます※</span></button>
 
@@ -110,14 +114,14 @@
 				<h3>まずは自分のアイテムを<br class="br_sp">出品しましょう！</h3>
 				<p>グッチェンでは、最低一品の<br class="br_sp">アイテム出品が必要です。<br>
 					自分が交換相手に提供できる<br class="br_sp">アイテムを出品してください。</p>
-					<span class="btn_bg_circle_green beginner_modal_close">出品する</span>
+				<span class="btn_bg_circle_green beginner_modal_close">出品する</span>
 			</div>
 		</div>
 	</div>
 	<footer id="footer"></footer>
 
 	<script>
-		$(function() {
+		$(function () {
 			$('.lightbox3').colorbox();
 		});
 	</script>
