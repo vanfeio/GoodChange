@@ -12,11 +12,9 @@
 	<meta name="googlebot" content="noindex">
 
 	<link rel="stylesheet" href="./css/style.css">
-	<link rel="stylesheet" href="/css/colorbox.css">
 
 	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 	<script type="text/javascript" src="./js/script.js"></script>
-	<script type="text/javascript" src="/js/jquery.colorbox-min.js"></script>
 </head>
 
 <body>
@@ -40,7 +38,7 @@
 				<ul>
 					<li>
 						<div class="title required">カテゴリ</div>
-						<a href="content.html" class="select_category lightbox3">カテゴリを選択</a>
+						<a href="" class="select_category" id="category_open">カテゴリを選択</a>
 					</li>
 					<li>
 						<div class="title required">商品名</div>
@@ -120,11 +118,7 @@
 	</div>
 	<footer id="footer"></footer>
 
-	<script>
-		$(function () {
-			$('.lightbox3').colorbox();
-		});
-	</script>
+	<div id="category"></div>
 </body>
 
 

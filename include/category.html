@@ -1,25 +1,45 @@
-<!doctype html>
-<html>
+<script>
+		// カテゴリ選択 - toggle
+	$(function () {
+		$('.category_area .parent').click(function() {
+			$(this).next('ul').slideToggle('fast');
+			$(this).toggleClass('open', 800);
+		});
+		$('.child01').click(function(e) {
+			$(this).children('ul').slideToggle('fast');
+			$(this).toggleClass('open', 800);
+			e.stopPropagation();
+		});
 
-<head>
-	<meta charset="UTF-8">
-	<title>カテゴリ選択｜【グッチェン】あなたの推し活を応援！グッズ交換サイト</title>
+		// 変数に要素を入れる
+		var open = $('#category_open'),
+		close = $('.category_close'),
+		container = $('.category_area');
 
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		//開くボタンをクリックしたらモーダルを表示する
+		open.on('click',function(){ 
+			container.addClass('active');
+			return false;
+		});
 
-	<meta name="robots" content="noindex">
-	<meta name="googlebot" content="noindex">
+		//閉じるボタンをクリックしたらモーダルを閉じる
+		close.on('click',function(){  
+			container.removeClass('active');
+		});
 
-	<link rel="stylesheet" href="../css/style.css">
+		//モーダルの外側をクリックしたらモーダルを閉じる
+		$(document).on('click',function(e) {
+		if(!$(e.target).closest('.category_area .modal_container').length) {
+			container.removeClass('active');
+		}
+		});
 
-	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-	<script type="text/javascript" src="../js/script.js"></script>
-</head>
+	});
+</script>
 
-<body style="padding-top: 0;">
-
-	<div class="category_area">
+<div class="category_area">
+	<div class="modal_container">
+		<div class="category_close"><img src="img/icon_close.svg" alt="閉じる"></div>
 		<div class="title">カテゴリ</div>
 		<div class="parent">アニメ</div>
 		<ul>
@@ -36,7 +56,7 @@
 				</ul>
 			</li>
 		</ul>
-
+	
 		<div class="parent">芸能</div>
 		<ul>
 			<li class="list"><a href="">芸能全て</a></li>
@@ -52,8 +72,8 @@
 				</ul>
 			</li>
 		</ul>
-
-
+	
+	
 		<div class="parent">スポーツ</div>
 		<ul>
 			<li class="list"><a href="">スポーツ全て</a></li>
@@ -69,7 +89,7 @@
 				</ul>
 			</li>
 		</ul>
-
+	
 		<div class="parent">その他</div>
 		<ul>
 			<li class="list"><a href="">その他全て</a></li>
@@ -84,11 +104,7 @@
 					</li>
 				</ul>
 			</li>
-		</ul>
-
+		</ul>	
 	</div>
 
-</body>
-
-
-</html>
+</div>
