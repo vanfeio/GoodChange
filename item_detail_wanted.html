@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>欲しいアイテム｜【グッチェン】あなたの推し活を応援！グッズ交換サイト</title>
+
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+	<meta name="robots" content="noindex">
+	<meta name="googlebot" content="noindex">
+
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/slick.css">
+
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="./js/script.js"></script>
+	<script type="text/javascript" src="./js/slick.min.js"></script>
+</head>
+
+<body>
+	<header id="header"></header>
+	<div id="item_detail">
+		<div id="search" class="container"></div>
+		<div class="pankuzu container"><a href="index.html" class="links">TOP</a> > 欲しいアイテム</div>
+
+		<div class="detail_area container">
+			<div class="detail_img">
+				<ul id="slider_main">
+					<li><img src="img/top_pkg-11.png" alt=""></li>
+					<li><img src="img/top_pkg-10.png" alt=""></li>
+					<li><img src="img/top_pkg-2.png" alt=""></li>
+					<li><img src="img/top_pkg-3.png" alt=""></li>
+				</ul>
+				<ul id="slider_thum">
+					<li><img src="img/top_pkg-11.png" alt=""></li>
+					<li><img src="img/top_pkg-10.png" alt=""></li>
+					<li><img src="img/top_pkg-2.png" alt=""></li>
+					<li><img src="img/top_pkg-3.png" alt=""></li>
+				</ul>
+			</div>
+			<div class="detail_text">
+				<div class="category">芸能 / 倖田來未</div>
+				<div class="tag">
+					<a href="" class="links">＃倖田來未</a>
+					<a href="" class="links">＃Koda Kumi Talkshow 2023</a>
+				</div>
+				<h3>倖田來未 限定缶バッジ【パターンA】</h3>
+				
+				<h5>商品の説明</h5>
+				<p class="explanation">ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。ここに商品説明が入ります。
+				</p>
+				<div class="explanation_more">▼もっと見る</div>
+				<dl class="state">
+					<dt>商品の状態</dt>
+					<dd>新品、未使用</dd>
+					<dt>発送方法</dt>
+					<dd>グッチェン事務局より発送(5営業日以内)</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+	<footer id="footer"></footer>
+
+	<script>
+		$(function () {
+			// 商品サムネイル付き写真
+			$('#slider_thum').slick({
+				asNavFor:'#slider_main',
+				arrows: false,
+				focusOnSelect: true,
+				slidesToShow: 5,
+				slidesToScroll: 1,
+				draggable: false,
+			});
+		$('#slider_main').slick({
+				asNavFor:'#slider_thum',
+				arrows: true,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				fade: true,
+				speed: 500,
+				draggable: false,
+			});
+			// 関連商品
+			$('#slider_exsample').slick({
+				arrows: true,
+				slidesToShow: 4,
+				slidesToScroll: 1,
+				centerMode: true,
+				centerPadding: '0',
+			});
+		});
+	</script>
+	<style>
+		header {
+			position: relative;
+		}
+		body {
+			padding: 0;
+		}
+	</style>
+</body>
+
+
+</html>

@@ -94,6 +94,30 @@ $(function () {
 		container.removeClass('active');
 	}
 	});
+
+	//続きを読むボタン
+	var $text = $('#item_detail .explanation');
+	var $more = $('#item_detail .explanation_more');
+	var lineNum = 8;
+	var textHeight = $text.height();
+	var lineHeight = parseFloat($text.css('line-height'));
+	var textNewHeight = lineHeight * lineNum;
+	if (textHeight > textNewHeight) {
+	$text.css({
+		height: textNewHeight,
+		overflow: 'hidden',
+	});
+	$more.click(function () {
+		$(this).hide();
+		$text.css({
+		'height': textHeight,
+		'overflow': 'visible',
+		});
+		return false;
+	});
+	} else {
+	$more.hide();
+	}
 });
 
 
