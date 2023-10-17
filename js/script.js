@@ -58,5 +58,43 @@ $(function () {
 		$(".sp_toggle").slideToggle('fast');
 	});
 
+	//メッセージ ユーザーネーム横ボタン
+	$('.more_btn').on("click",function(){
+		$(this).next(".more_area").fadeToggle(200);
+	});
+
+	//メッセージ メッセージで取引を開始する
+	$('#start_message').on("click",function(){
+		$('#mypage_message .message').fadeIn();
+		$('#mypage_message .message_form').fadeIn();
+		$('#mypage_message .request_btn_area').remove();
+	});
+
+	$('#message_fixed_btn').on("click",function(){
+		$('#mypage_message .notes_area_fixed').fadeIn();
+		$('#mypage_message .notes_area_completion').remove();
+	});
+
+	// 支払情報の登録 - modal
+	var open = $('#payment_open'),
+	close = $('.payment_open'),
+	container = $('.payment_area');
+
+	open.on('click',function(){ 
+		container.addClass('active');
+		return false;
+	});
+
+	close.on('click',function(){  
+		container.removeClass('active');
+	});
+
+	$(document).on('click',function(e) {
+	if(!$(e.target).closest('.category_area .modal_container').length) {
+		container.removeClass('active');
+	}
+	});
 });
+
+
 

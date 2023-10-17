@@ -521,9 +521,13 @@ h3 {
   }
 }
 h3.return {
-  background: url(../img/arrow_l_gray.svg) no-repeat 0 center/12px auto;
-  padding-left: 2em;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
+}
+@media screen and (max-width: 834px) {
+  h3.return {
+    background: url(../img/arrow_l_gray.svg) no-repeat 0 center/12px auto;
+    padding-left: 2em;
+  }
 }
 
 h4 {
@@ -549,6 +553,10 @@ p {
   p {
     font-size: 1.2rem;
   }
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .center {
@@ -585,6 +593,24 @@ p {
 @media screen and (max-width: 834px) {
   .br_sp {
     display: block;
+  }
+}
+
+.display_sp {
+  display: none;
+}
+@media screen and (max-width: 834px) {
+  .display_sp {
+    display: block;
+  }
+}
+
+.display_pc {
+  display: block;
+}
+@media screen and (max-width: 834px) {
+  .display_pc {
+    display: none;
   }
 }
 
@@ -631,9 +657,46 @@ p {
   border-radius: 4px;
   padding: 12px 32px;
   display: inline-block;
+  border: none;
+  line-height: 1;
 }
 @media screen and (max-width: 834px) {
   .btn_bg_square_green {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+}
+
+.btn_bg_square_red {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+  background: #E2003D;
+  border-radius: 4px;
+  padding: 12px 32px;
+  display: inline-block;
+  border: none;
+  line-height: 1;
+}
+@media screen and (max-width: 834px) {
+  .btn_bg_square_red {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+}
+
+.btn_bg_square_gray {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+  background: #ccc;
+  border-radius: 4px;
+  padding: 12px 32px;
+  display: inline-block;
+  border: none;
+}
+@media screen and (max-width: 834px) {
+  .btn_bg_square_gray {
     font-size: 1rem;
     padding: 8px 12px;
   }
@@ -829,7 +892,7 @@ header .header_container .right_area .news_icon dl {
     margin-right: 8px;
   }
 }
-header .header_container .right_area .news_icon dl .alert::before {
+header .header_container .right_area .news_icon dl .header_alert::before {
   content: "●";
   color: #E2003D;
   position: absolute;
@@ -837,7 +900,7 @@ header .header_container .right_area .news_icon dl .alert::before {
   top: -2px;
 }
 @media screen and (max-width: 834px) {
-  header .header_container .right_area .news_icon dl .alert::before {
+  header .header_container .right_area .news_icon dl .header_alert::before {
     font-size: 1rem;
   }
 }
@@ -1188,6 +1251,66 @@ footer .bottom small {
 .pankuzu {
   color: #aaa;
   font-size: 1.2rem;
+}
+
+.label_receive {
+  background: #FFF1E5;
+  color: #D66300;
+  padding: 0.8em 1em;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 16px;
+  font-size: 1rem;
+}
+@media screen and (max-width: 834px) {
+  .label_receive {
+    margin-bottom: 8px;
+  }
+}
+
+.label_suggest {
+  background: #E7F5F3;
+  color: #4DB2A4;
+  padding: 0.8em 1em;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 16px;
+  font-size: 1rem;
+}
+@media screen and (max-width: 834px) {
+  .label_suggest {
+    margin-bottom: 8px;
+  }
+}
+
+.label_fixed {
+  background: #FFF5F8;
+  color: #E2003D;
+  padding: 0.8em 1em;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 16px;
+  font-size: 1rem;
+}
+@media screen and (max-width: 834px) {
+  .label_fixed {
+    margin-bottom: 8px;
+  }
+}
+
+.label_now {
+  background: #F8F8F8;
+  color: #333;
+  padding: 0.8em 1em;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 16px;
+  font-size: 1rem;
+}
+@media screen and (max-width: 834px) {
+  .label_now {
+    margin-bottom: 8px;
+  }
 }
 
 /*---------------------------------------------------
@@ -2074,13 +2197,13 @@ footer .bottom small {
   background: url(../img/arrow_t_gray.svg) no-repeat right 8px center/12px auto;
 }
 
-.mypage_area .container {
+.mypage_area > .container {
   padding-top: 40px;
   display: flex;
   justify-content: space-between;
 }
 @media screen and (max-width: 834px) {
-  .mypage_area .container {
+  .mypage_area > .container {
     flex-wrap: wrap;
     padding-top: 24px;
   }
@@ -2167,7 +2290,6 @@ footer .bottom small {
   display: -webkit-box;
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
   -webkit-line-clamp: 1;
   background: url(../img/arrow_r_gray.svg) no-repeat right center/contain;
   padding-right: 1.5rem;
@@ -2230,6 +2352,11 @@ footer .bottom small {
   justify-content: center;
   margin-bottom: 32px;
 }
+@media screen and (max-width: 834px) {
+  #mypage_lists .mypage_lists_tab li {
+    width: 50%;
+  }
+}
 #mypage_lists .mypage_lists_tab .active,
 #mypage_lists .mypage_lists_tab a {
   font-size: 1.4rem;
@@ -2242,7 +2369,7 @@ footer .bottom small {
   #mypage_lists .mypage_lists_tab .active,
   #mypage_lists .mypage_lists_tab a {
     padding: 1em 0;
-    width: 50%;
+    width: 100%;
     text-align: center;
     font-size: 1.2rem;
   }
@@ -2250,6 +2377,11 @@ footer .bottom small {
 #mypage_lists .mypage_lists_tab .active {
   background: #4DB2A4;
   color: white;
+}
+@media screen and (max-width: 834px) {
+  #mypage_lists .mypage_lists_tab .active {
+    width: 50%;
+  }
 }
 #mypage_lists .mypage_lists .tab_area {
   display: flex;
@@ -2342,7 +2474,6 @@ footer .bottom small {
   display: -webkit-box;
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
   -webkit-line-clamp: 1;
 }
 #mypage_lists .mypage_lists .panel li .item_name .label_new {
@@ -2400,7 +2531,6 @@ footer .bottom small {
   display: -webkit-box;
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
   -webkit-line-clamp: 1;
   margin-bottom: 1em;
 }
@@ -2626,7 +2756,6 @@ footer .bottom small {
   display: -webkit-box;
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
   -webkit-line-clamp: 1;
 }
 #search_artist section ul .num {
@@ -2823,4 +2952,874 @@ footer .bottom small {
 #item .item_list_area .pagenation .active a {
   color: white;
   background: #aaa;
+}
+
+@media screen and (max-width: 834px) {
+  #mypage_message {
+    height: calc(100vh - 70px);
+    overflow: hidden;
+    position: relative;
+  }
+}
+#mypage_message .container {
+  padding-bottom: 40px;
+  position: relative;
+  height: 80vh;
+}
+@media screen and (max-width: 834px) {
+  #mypage_message .container {
+    height: 100vh;
+    max-width: 100%;
+    position: initial;
+  }
+}
+#mypage_message .return.display_sp {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#mypage_message .sp_toggle_btn {
+  display: none;
+}
+@media screen and (max-width: 834px) {
+  #mypage_message .sp_toggle_btn {
+    display: block;
+    position: fixed;
+    right: 8px;
+    top: 80px;
+    z-index: 999;
+  }
+}
+#mypage_message .message_list {
+  max-width: 20%;
+  overflow-y: scroll;
+}
+@media screen and (max-width: 834px) {
+  #mypage_message .message_list {
+    width: 100%;
+    max-width: 100%;
+    height: 90vh;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 997;
+    background: white;
+  }
+}
+#mypage_message .message_list ul a {
+  display: flex;
+  align-items: center;
+  padding: 1em 0;
+  border-bottom: 1px solid #ccc;
+}
+@media screen and (max-width: 834px) {
+  #mypage_message .message_list ul a {
+    padding: 1em;
+  }
+}
+#mypage_message .message_list ul a img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 8px;
+}
+#mypage_message .message_list ul a p {
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  font-weight: bold;
+}
+#mypage_message .message_list ul .active a {
+  background: #EFEFEF;
+}
+#mypage_message .message_form {
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+  background: #EBEBEB;
+  padding: 8px 16px;
+  width: 100%;
+  max-width: 75%;
+  z-index: 960;
+  height: 170px;
+  display: none;
+}
+@media screen and (max-width: 834px) {
+  #mypage_message .message_form {
+    bottom: 0;
+    max-width: 100%;
+    padding: 8px;
+    height: 160px;
+  }
+}
+#mypage_message .message_form .form_header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 8px;
+}
+#mypage_message .message_form .form_header .file {
+  margin-right: auto;
+  -webkit-writing-mode: vertical-rl;
+}
+#mypage_message .message_form .form_header button {
+  font-size: 1.2rem;
+  padding: 8px;
+  margin: 0 4px;
+}
+@media screen and (max-width: 834px) {
+  #mypage_message .message_form .form_header button {
+    font-size: 1rem;
+  }
+}
+#mypage_message .message_form textarea {
+  padding: 1em;
+}
+#mypage_message .message_contents {
+  max-width: 75%;
+  overflow-y: scroll;
+  background: white;
+  position: relative;
+  padding-bottom: 220px;
+}
+@media screen and (max-width: 834px) {
+  #mypage_message .message_contents {
+    max-width: 100%;
+    height: 100vh;
+    padding-bottom: 360px;
+  }
+}
+#mypage_message .message_contents .title {
+  padding: 16px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 24px;
+}
+#mypage_message .message_contents .title .more_area {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  background: white;
+  padding: 16px 24px 8px;
+  border-radius: 6px;
+  position: absolute;
+  right: 8px;
+  top: 56px;
+  display: none;
+}
+#mypage_message .message_contents .title .more_area a {
+  font-size: 1.4rem;
+  display: block;
+  margin-bottom: 1em;
+}
+#mypage_message .message_contents .date {
+  color: #aaa;
+  margin-bottom: 2em;
+}
+#mypage_message .message_contents .first_message {
+  padding: 0 24px;
+}
+@media screen and (max-width: 834px) {
+  #mypage_message .message_contents .first_message {
+    padding: 0 8px;
+  }
+}
+#mypage_message .message_contents .content {
+  display: flex;
+  margin-bottom: 32px;
+}
+#mypage_message .message_contents .content .img {
+  margin-right: 2%;
+  width: 8%;
+}
+@media screen and (max-width: 834px) {
+  #mypage_message .message_contents .content .img {
+    width: 10%;
+  }
+}
+#mypage_message .message_contents .content .img img {
+  width: 100%;
+  height: 55px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 834px) {
+  #mypage_message .message_contents .content .img img {
+    height: 35px;
+  }
+}
+#mypage_message .message_contents .content .text {
+  width: 90%;
+}
+#mypage_message .message_contents .content .text .user_name {
+  margin-bottom: 0.5em;
+}
+#mypage_message .message_contents .content .text .request {
+  border: 1px solid #4DB2A4;
+  border-radius: 8px;
+}
+#mypage_message .message_contents .content .text .request_title {
+  background: #E7F5F3;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 1em 0.8em;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 1em;
+}
+#mypage_message .message_contents .content .text .request_inner {
+  display: flex;
+  align-items: flex-start;
+  padding: 0 24px 24px;
+}
+@media screen and (max-width: 834px) {
+  #mypage_message .message_contents .content .text .request_inner {
+    display: block;
+    padding: 0 16px 16px;
+  }
+}
+#mypage_message .message_contents .content .text .request_img {
+  margin-right: 2%;
+  width: 20%;
+}
+@media screen and (max-width: 834px) {
+  #mypage_message .message_contents .content .text .request_img {
+    width: 100px;
+    margin: 0 0 8px;
+  }
+}
+#mypage_message .message_contents .content .text .request_img img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#mypage_message .message_contents .content .text .request_text {
+  width: 78%;
+  line-height: 1.5;
+}
+@media screen and (max-width: 834px) {
+  #mypage_message .message_contents .content .text .request_text {
+    width: 100%;
+  }
+}
+#mypage_message .message_contents .content .text .request_text ul {
+  margin-bottom: 8px;
+}
+#mypage_message .message_contents .content .text .request_text li {
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+#mypage_message .message_contents .content .text .request_btn_area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+}
+@media screen and (max-width: 834px) {
+  #mypage_message .message_contents .content .text .request_btn_area {
+    display: block;
+  }
+}
+#mypage_message .message_contents .content .text .request_btn_area button {
+  display: flex;
+  align-items: center;
+  margin: 0 4px;
+}
+@media screen and (max-width: 834px) {
+  #mypage_message .message_contents .content .text .request_btn_area button {
+    margin: 0 auto 8px;
+    font-size: 1.4rem;
+    width: 80%;
+    justify-content: center;
+  }
+}
+#mypage_message .message_contents .content .text .request_btn_area button.btn_bg_square_gray {
+  background: #aaa;
+}
+#mypage_message .message_contents .content .text .request_btn_area button img {
+  width: 20px;
+  margin-right: 4px;
+}
+#mypage_message .message_contents .content .text .img_attached {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin-top: 8px;
+}
+#mypage_message .message_contents .content .text .img_attached img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#mypage_message .message_contents .content .text .img_attached .file_name {
+  color: #aaa;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+}
+#mypage_message .message_contents .content .text .img_attached .file_name .preview {
+  border: 1px solid #0058D0;
+  border-radius: 2px;
+  color: #0058D0;
+  padding: 0.2em;
+  margin-left: 1em;
+}
+#mypage_message .message_contents .message {
+  padding: 0 24px;
+  display: none;
+}
+#mypage_message .message_contents .notes_area {
+  background: #FFF7F9;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+#mypage_message .message_contents .notes_area p {
+  font-size: 1.2rem;
+}
+#mypage_message .message_contents .notes_area .eye {
+  background: url(../img/icon_eye.svg) no-repeat 0 center/18px auto;
+  padding-left: 1.5em;
+  color: #aaa;
+}
+#mypage_message .message_contents .alert_end {
+  background: #ccc;
+  color: white;
+  border-radius: 100px;
+  padding: 16px 40px;
+  display: inline-block;
+}
+#mypage_message .message_contents .message_alert_gray {
+  background: #ccc;
+  font-size: 1, 4rem;
+  padding: 8px 16px;
+  display: inline-block;
+  margin: 0 0 24px;
+}
+@media screen and (max-width: 834px) {
+  #mypage_message .message_contents .message_alert_gray {
+    text-align: left;
+    line-height: 1.5;
+    font-size: 1.2rem;
+  }
+}
+#mypage_message .message_contents .notes_area_completion {
+  background: #E7F5F3;
+  padding: 24px;
+}
+@media screen and (max-width: 834px) {
+  #mypage_message .message_contents .notes_area_completion {
+    max-width: 98%;
+    margin: 0 auto;
+    padding: 16px;
+  }
+}
+#mypage_message .message_contents .notes_area_completion p {
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+}
+#mypage_message .message_contents .notes_area_completion_title {
+  color: #4DB2A4;
+  background: url(../img/icon_check_green.svg) no-repeat 0 center/contain;
+  padding-left: 1.5em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+@media screen and (max-width: 834px) {
+  #mypage_message .message_contents .notes_area_completion .btn_bg_square_red {
+    font-size: 1.4rem;
+  }
+}
+#mypage_message .message_contents .notes_area_fixed {
+  background: #FFF7F9;
+  padding: 24px;
+  display: none;
+}
+@media screen and (max-width: 834px) {
+  #mypage_message .message_contents .notes_area_fixed {
+    max-width: 98%;
+    margin: 0 auto;
+    padding: 16px;
+  }
+}
+#mypage_message .message_contents .notes_area_fixed p {
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+}
+#mypage_message .message_contents .notes_area_fixed_title {
+  color: #E2003D;
+  background: url(../img/icon_check_red.svg) no-repeat 0 center/contain;
+  padding-left: 1.5em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+#mypage_delivery .box {
+  border: 1px solid #4DB2A4;
+  padding: 24px;
+  font-size: 2rem;
+  border-radius: 6px;
+  background: white;
+  width: 80%;
+  margin: 24px auto;
+  line-height: 1.7;
+  font-weight: bold;
+}
+@media screen and (max-width: 834px) {
+  #mypage_delivery .box {
+    padding: 16px;
+    font-size: 1.6rem;
+    width: 100%;
+    margin: 16px auto;
+  }
+}
+#mypage_delivery .btn_bg_circle_green {
+  display: block;
+  margin: 0 auto 16px;
+}
+@media screen and (max-width: 834px) {
+  #mypage_delivery .btn_bg_circle_green {
+    margin-bottom: 8px;
+  }
+}
+
+#mypage_agreement p {
+  margin-bottom: 1.5em;
+}
+#mypage_agreement .btn_bg_circle_green {
+  display: block;
+  margin: 16px auto 0;
+}
+@media screen and (max-width: 834px) {
+  #mypage_agreement .btn_bg_circle_green {
+    margin-top: 8px;
+  }
+}
+
+#mypage_transaction .tab_area {
+  display: flex;
+  position: relative;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+}
+@media screen and (max-width: 834px) {
+  #mypage_transaction .tab_area {
+    justify-content: space-between;
+  }
+}
+#mypage_transaction .tab_area::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #707070;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+}
+#mypage_transaction .tab_area li {
+  padding: 0 3em;
+  position: relative;
+  cursor: pointer;
+}
+@media screen and (max-width: 834px) {
+  #mypage_transaction .tab_area li {
+    padding: 0;
+    width: 32%;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+}
+#mypage_transaction .tab_area li.active {
+  font-weight: bold;
+}
+#mypage_transaction .tab_area li.active::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #FFD900;
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  z-index: 2;
+}
+#mypage_transaction .number {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 1em;
+}
+#mypage_transaction .panel {
+  display: none;
+  margin-bottom: 40px;
+}
+#mypage_transaction .panel.active {
+  display: block;
+}
+#mypage_transaction .panel > li {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+#mypage_transaction .panel > li .img {
+  width: 23%;
+}
+@media screen and (max-width: 834px) {
+  #mypage_transaction .panel > li .img {
+    width: 30%;
+  }
+}
+#mypage_transaction .panel > li .img img {
+  width: 100%;
+  height: 160px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 834px) {
+  #mypage_transaction .panel > li .img img {
+    height: 90px;
+  }
+}
+#mypage_transaction .panel > li .text {
+  width: 75%;
+}
+@media screen and (max-width: 834px) {
+  #mypage_transaction .panel > li .text {
+    width: 64%;
+  }
+}
+#mypage_transaction .panel > li .title {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 16px;
+}
+@media screen and (max-width: 834px) {
+  #mypage_transaction .panel > li .title {
+    margin-bottom: 6px;
+  }
+}
+#mypage_transaction .panel > li .title h3 {
+  margin-bottom: 0;
+}
+#mypage_transaction .panel > li .title h3 a {
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+@media screen and (max-width: 834px) {
+  #mypage_transaction .panel > li .title h3 a {
+    width: 88%;
+    font-size: 1.4rem;
+  }
+}
+#mypage_transaction .panel > li .title .more_area {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  background: white;
+  padding: 16px 24px 8px;
+  border-radius: 6px;
+  position: absolute;
+  right: 8px;
+  top: 40px;
+  display: none;
+}
+#mypage_transaction .panel > li .title .more_area a {
+  font-size: 1.4rem;
+  display: block;
+  margin-bottom: 1em;
+}
+#mypage_transaction .panel > li .prof .name {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+#mypage_transaction .panel > li .prof .prof_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#mypage_transaction .panel > li .prof .prof_box .prof_img {
+  width: 10%;
+}
+@media screen and (max-width: 834px) {
+  #mypage_transaction .panel > li .prof .prof_box .prof_img {
+    width: 20%;
+  }
+}
+#mypage_transaction .panel > li .prof .prof_box .prof_img img {
+  width: 100%;
+  height: 54px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 834px) {
+  #mypage_transaction .panel > li .prof .prof_box .prof_img img {
+    height: 40px;
+  }
+}
+#mypage_transaction .panel > li .prof .prof_box .prof_right {
+  width: 88%;
+}
+@media screen and (max-width: 834px) {
+  #mypage_transaction .panel > li .prof .prof_box .prof_right {
+    width: 78%;
+  }
+}
+#mypage_transaction .panel > li .prof .prof_box .prof_right p {
+  line-height: 1.2;
+}
+#mypage_transaction .panel > li .prof .prof_box .star {
+  display: flex;
+}
+#mypage_transaction .panel > li .prof .prof_box .star li {
+  margin-right: 4px;
+  width: 16px;
+  height: 16px;
+}
+
+@media screen and (max-width: 834px) {
+  #mypage_transaction_item .container {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 834px) {
+  #mypage_transaction_item > h3 {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+#mypage_transaction_item .transaction_item_area {
+  background: white;
+  padding: 24px 24px 40px;
+}
+#mypage_transaction_item h4 {
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+#mypage_transaction_item .transaction_header {
+  display: flex;
+  justify-content: space-between;
+}
+#mypage_transaction_item .transaction_header .img {
+  width: 23%;
+}
+#mypage_transaction_item .transaction_header .img img {
+  width: 100%;
+  height: 160px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 834px) {
+  #mypage_transaction_item .transaction_header .img img {
+    height: 80px;
+  }
+}
+#mypage_transaction_item .transaction_header .text {
+  width: 72%;
+}
+@media screen and (max-width: 834px) {
+  #mypage_transaction_item .transaction_header .text {
+    width: 72%;
+  }
+}
+#mypage_transaction_item .transaction_header .text h3 {
+  margin-bottom: 8px;
+}
+#mypage_transaction_item .transaction_header .text .status {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+#mypage_transaction_item .transaction_header .text .status span {
+  margin-right: 6px;
+}
+#mypage_transaction_item .transaction_header .text .prof .name {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+@media screen and (max-width: 834px) {
+  #mypage_transaction_item .transaction_header .text .prof .name {
+    font-size: 1rem;
+  }
+}
+#mypage_transaction_item .transaction_header .text .prof .prof_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#mypage_transaction_item .transaction_header .text .prof .prof_box .prof_img {
+  width: 10%;
+}
+@media screen and (max-width: 834px) {
+  #mypage_transaction_item .transaction_header .text .prof .prof_box .prof_img {
+    width: 20%;
+  }
+}
+#mypage_transaction_item .transaction_header .text .prof .prof_box .prof_img img {
+  width: 100%;
+  height: 50px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#mypage_transaction_item .transaction_header .text .prof .prof_box .prof_right {
+  width: 88%;
+}
+@media screen and (max-width: 834px) {
+  #mypage_transaction_item .transaction_header .text .prof .prof_box .prof_right {
+    width: 78%;
+  }
+}
+#mypage_transaction_item .transaction_header .text .prof .prof_box .prof_right p {
+  line-height: 1.2;
+}
+#mypage_transaction_item .transaction_header .text .prof .prof_box .star {
+  display: flex;
+}
+#mypage_transaction_item .transaction_header .text .prof .prof_box .star li {
+  margin-right: 4px;
+  width: 16px;
+  height: 16px;
+}
+#mypage_transaction_item .item_box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  border: 1px solid #aaa;
+  padding: 16px;
+}
+#mypage_transaction_item .item_box .img {
+  width: 23%;
+}
+@media screen and (max-width: 834px) {
+  #mypage_transaction_item .item_box .img {
+    width: 30%;
+  }
+}
+#mypage_transaction_item .item_box .img img {
+  width: 100%;
+  height: 160px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 834px) {
+  #mypage_transaction_item .item_box .img img {
+    height: 90px;
+  }
+}
+#mypage_transaction_item .item_box .text {
+  width: 75%;
+}
+@media screen and (max-width: 834px) {
+  #mypage_transaction_item .item_box .text {
+    width: 64%;
+  }
+}
+#mypage_transaction_item .item_box .text dl {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 1.5;
+}
+@media screen and (max-width: 834px) {
+  #mypage_transaction_item .item_box .text dl {
+    font-size: 1.2rem;
+  }
+}
+#mypage_transaction_item .item_box .text dl dt {
+  width: 20%;
+  font-weight: bold;
+  margin-top: 0.5em;
+}
+@media screen and (max-width: 834px) {
+  #mypage_transaction_item .item_box .text dl dt {
+    width: 100%;
+  }
+}
+#mypage_transaction_item .item_box .text dl dd {
+  width: 80%;
+  margin-top: 0.2em;
+}
+@media screen and (max-width: 834px) {
+  #mypage_transaction_item .item_box .text dl dd {
+    width: 100%;
+  }
+}
+#mypage_transaction_item .btn_bg_circle_red {
+  width: 440px;
+  margin: 16px auto;
+}
+@media screen and (max-width: 834px) {
+  #mypage_transaction_item .btn_bg_circle_red img {
+    width: 10px;
+  }
+}
+#mypage_transaction_item .payment_area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 999;
+}
+#mypage_transaction_item .payment_area:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+#mypage_transaction_item .payment_area.active {
+  opacity: 1;
+  visibility: visible;
+}
+#mypage_transaction_item .payment_area .modal_container {
+  position: absolute;
+  left: 30%;
+  top: 30%;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+@media screen and (max-width: 834px) {
+  #mypage_transaction_item .payment_area .modal_container {
+    left: 5vw;
+    top: 30%;
+    width: 90vw;
+    height: auto;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+}
+#mypage_transaction_item .payment_area .modal_container .payment_close {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  cursor: pointer;
+}
+#mypage_transaction_item .payment_area .modal_container .links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 834px) {
+  #mypage_transaction_item .payment_area .modal_container .links {
+    font-size: 1.2rem;
+  }
 }/*# sourceMappingURL=style.css.map */
