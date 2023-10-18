@@ -3079,6 +3079,7 @@ footer .bottom small {
 }
 @media screen and (max-width: 834px) {
   #mypage_message .message_form {
+    position: fixed;
     bottom: 0;
     max-width: 100%;
     padding: 8px;

@@ -2709,6 +2709,7 @@ footer {
 		height: 170px;
 		display: none;
 		@media screen and (max-width: $bp-sp) {
+			position: fixed;
 			bottom: 0;
 			max-width: 100%;
 			padding: 8px;
