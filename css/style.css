@@ -647,6 +647,24 @@ p {
   }
 }
 
+.btn_line_square_green {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #4DB2A4;
+  background: white;
+  border-radius: 4px;
+  padding: 12px 32px;
+  display: block;
+  border: 2px solid #4DB2A4;
+  margin: 0 auto;
+}
+@media screen and (max-width: 834px) {
+  .btn_line_square_green {
+    font-size: 1.4rem;
+    padding: 8px 12px;
+  }
+}
+
 .btn_bg_square_green {
   font-size: 1.4rem;
   font-weight: bold;
@@ -2291,6 +2309,7 @@ footer .bottom small {
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
+  line-height: 1.5;
   background: url(../img/arrow_r_gray.svg) no-repeat right center/contain;
   padding-right: 1.5rem;
   text-align: center;
@@ -2475,6 +2494,7 @@ footer .bottom small {
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
+  line-height: 1.5;
 }
 #mypage_lists .mypage_lists .panel li .item_name .label_new {
   margin-right: 1em;
@@ -2532,6 +2552,7 @@ footer .bottom small {
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
+  line-height: 1.5;
   margin-bottom: 1em;
 }
 #mypage_lists .history_lists .item_name .label_new {
@@ -2757,6 +2778,7 @@ footer .bottom small {
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
+  line-height: 1.5;
 }
 #search_artist section ul .num {
   color: #aaa;
@@ -3037,6 +3059,7 @@ footer .bottom small {
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
+  line-height: 1.5;
   font-weight: bold;
 }
 #mypage_message .message_list ul .active a {
@@ -3222,6 +3245,7 @@ footer .bottom small {
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
+  line-height: 1.5;
 }
 #mypage_message .message_contents .content .text .request_btn_area {
   display: flex;
@@ -3524,6 +3548,7 @@ footer .bottom small {
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
+  line-height: 1.5;
 }
 @media screen and (max-width: 834px) {
   #mypage_transaction .panel > li .title h3 a {
@@ -4029,6 +4054,7 @@ footer .bottom small {
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
+  line-height: 1.5;
 }
 #item_detail .detail_area .prof .text .star {
   display: flex;
@@ -4638,6 +4664,252 @@ footer .bottom small {
 }
 @media screen and (max-width: 834px) {
   #mypage_setting .new_form button {
+    font-size: 1.4rem;
+  }
+}
+
+#profile {
+  margin-top: 60px;
+}
+@media screen and (max-width: 834px) {
+  #profile {
+    margin-top: 24px;
+  }
+}
+#profile .prof {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 834px) {
+  #profile .prof {
+    display: block;
+    margin-bottom: 16px;
+  }
+}
+#profile .prof a {
+  margin-right: 0;
+}
+@media screen and (max-width: 834px) {
+  #profile .prof a {
+    text-align: center;
+    padding: 12px 0;
+  }
+}
+#profile .prof_area {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 834px) {
+  #profile .prof_area {
+    margin-bottom: 16px;
+  }
+}
+#profile .prof_area .img {
+  width: 100px;
+  margin-right: 24px;
+}
+@media screen and (max-width: 834px) {
+  #profile .prof_area .img {
+    width: 30%;
+  }
+}
+#profile .prof_area .img img {
+  width: 100px;
+  height: 105px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 834px) {
+  #profile .prof_area .img img {
+    height: 100px;
+  }
+}
+#profile .prof_area .text {
+  width: 76%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+@media screen and (max-width: 834px) {
+  #profile .prof_area .text {
+    width: 66%;
+  }
+}
+#profile .prof_area .text .name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-height: 1.5;
+}
+#profile .prof_area .text .star {
+  display: flex;
+}
+#profile .prof_area .text .star li {
+  margin-right: 4px;
+  width: 16px;
+  height: 16px;
+}
+#profile .prof_area .text .item {
+  font-size: 1.4rem;
+}
+#profile .address {
+  margin: 24px 0;
+}
+@media screen and (max-width: 834px) {
+  #profile .address {
+    margin: 16px 0;
+  }
+}
+#profile .url {
+  border: 1px solid #ccc;
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+#profile .url p {
+  margin-right: 8px;
+}
+#profile .item_list_area {
+  margin-top: 40px;
+}
+#profile .item_list_area .item_list {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  -moz-column-gap: 1.3%;
+       column-gap: 1.3%;
+  display: flex;
+  margin-bottom: 64px;
+}
+@media screen and (max-width: 834px) {
+  #profile .item_list_area .item_list {
+    margin-bottom: 40px;
+    -moz-column-gap: 3.3%;
+         column-gap: 3.3%;
+  }
+}
+#profile .item_list_area .item_list li {
+  width: 24%;
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 834px) {
+  #profile .item_list_area .item_list li {
+    width: 31%;
+    margin-bottom: 16px;
+  }
+}
+#profile .item_list_area .item_list li.soldout {
+  position: relative;
+}
+#profile .item_list_area .item_list li.soldout::before {
+  content: "soldout";
+  background: #E2003D;
+  position: absolute;
+  top: 8px;
+  left: 0;
+  z-index: 2;
+  color: white;
+  padding: 0.4em;
+}
+#profile .item_list_area .item_list li .img {
+  position: relative;
+}
+#profile .item_list_area .item_list li .img > img {
+  width: 100%;
+  height: 220px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 834px) {
+  #profile .item_list_area .item_list li .img > img {
+    width: 100%;
+    height: 110px;
+  }
+}
+#profile .item_list_area .item_list li .img .favo {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+}
+@media screen and (max-width: 834px) {
+  #profile .item_list_area .item_list li .img .favo {
+    width: 16px;
+    height: 16px;
+    right: 8px;
+    bottom: 8px;
+  }
+}
+#profile .item_list_area .item_list li p {
+  margin-top: 0.4em;
+  width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+#profile_edit .img {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 834px) {
+  #profile_edit .img {
+    margin: 0 auto 24px;
+  }
+}
+#profile_edit .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#profile_edit .img::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+#profile_edit .img::after {
+  content: "";
+  background: url(../img/icon_camera.svg) no-repeat center center/44px auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+#profile_edit .new_form ul {
+  margin: 24px 0 16px;
+  width: 70%;
+}
+@media screen and (max-width: 834px) {
+  #profile_edit .new_form ul {
+    width: 100%;
+    margin: 16px 0 8px;
+  }
+}
+#profile_edit .new_form ul li:not(:last-child) {
+  margin-bottom: 12px;
+}
+@media screen and (max-width: 834px) {
+  #profile_edit .new_form button {
     font-size: 1.4rem;
   }
 }/*# sourceMappingURL=style.css.map */
