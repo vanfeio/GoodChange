@@ -258,6 +258,8 @@ button {
 	&.links {
 		color: #0058D0;
 		text-decoration: underline;
+		border: none;
+		background: none;
 	}
 }
 a:hover,button:hover {
@@ -462,10 +464,8 @@ h3 {
 	}
 	&.return {
 		margin-bottom: 1em;
-		@media screen and (max-width: $bp-sp) {
-			background: url(../img/arrow_l_gray.svg) no-repeat 0 center / 12px auto;
-			padding-left: 2em;
-		}
+		background: url(../img/arrow_l_gray.svg) no-repeat 0 center / 12px auto;
+		padding-left: 2em;
 	}
 }
 
@@ -634,6 +634,7 @@ p {
 	display: inline-block;
 	width: 300px;
 	text-align: center;
+	border: none;
 	@media screen and (max-width: $bp-sp) {
 		font-size: 1.4rem;
 		padding: 18px 0;
@@ -3860,3 +3861,249 @@ footer {
 		}
 	}
 }
+
+#faq {
+	dl {
+		max-width: 800px;
+		margin: 64px auto 80px;
+		font-size: 1.4rem;
+		line-height: 1.6;
+		@media screen and (max-width: $bp-sp) {
+			max-width: 90%;
+		}
+		dt {
+			background: url(../img/arrow_b_gray.svg) no-repeat right center / 16px auto;
+			padding-left: 3rem;
+			padding-bottom: 1em;
+			margin-bottom: 1em;
+			border-bottom: 1px solid $line;
+			position: relative;
+			@media screen and (max-width: $bp-sp) {
+				background: url(../img/arrow_b_gray.svg) no-repeat right center / 12px auto;
+			}
+			&.active {
+				background: url(../img/arrow_t_gray.svg) no-repeat right center / 16px auto;
+				@media screen and (max-width: $bp-sp) {
+					background: url(../img/arrow_t_gray.svg) no-repeat right center / 12px auto;
+				}
+			}
+			&::before {
+				content: '';
+				background: url(../img/icon_q.svg) no-repeat 0 0 / contain;
+				width: 20px;
+				height: 20px;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		}
+		dd {
+			padding-bottom: 40px;
+			display: none;
+		}
+	}
+}
+
+#contact {
+	.contact_area {
+		max-width: 800px;
+		margin: 0 auto;
+		padding: 40px 0 80px;
+		@media screen and (max-width: $bp-sp) {
+			max-width: 90%;
+		}
+		& > p {
+			margin-bottom: 3em;
+		}
+	}
+	ul {
+		margin-bottom: 40px;
+		@media screen and (max-width: $bp-sp) {
+			margin-bottom: 24px;
+		}
+	}
+	li {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-bottom: 24px;
+		@media screen and (max-width: $bp-sp) {
+			display: block;
+		}
+		.title {
+			width: 18%;
+			margin-right: 5%;
+			font-weight: bold;
+			@media screen and (max-width: $bp-sp) {
+				width: 100%;
+				margin: 0 0 8px;
+			}
+		}
+		input,
+		textarea {
+			width: 77%;
+			@media screen and (max-width: $bp-sp) {
+				width: 100%;
+			}
+			&.short {
+				width: 40%;
+				@media screen and (max-width: $bp-sp) {
+					width: 100%;
+				}
+			}
+		}
+		p {
+			width: 77%;
+			margin-left: auto;
+			margin-top: 1em;
+			@media screen and (max-width: $bp-sp) {
+				width: 100%;
+			}
+		}
+	}
+	p.center {
+		margin-bottom: 24px;
+		@media screen and (max-width: $bp-sp) {
+			text-align: left;
+		}
+	}
+	.thanks {
+		margin: 24px 0 40px;
+	}
+}
+
+ #terms {
+	.terms_area {
+		max-width: 800px;
+		margin: 0 auto;
+		padding: 40px 0 80px;
+		@media screen and (max-width: $bp-sp) {
+			max-width: 90%;
+		}
+	}
+ }
+
+ #company {
+	.company_area {
+		max-width: 600px;
+		margin: 0 auto;
+		padding: 40px 0 80px;
+		@media screen and (max-width: $bp-sp) {
+			max-width: 90%;
+		}
+		dl {
+			display: flex;
+			flex-wrap: wrap;
+			font-size: 1.4rem;
+			border-top: 1px solid $line;
+			line-height: 1.5;
+			@media screen and (max-width: $bp-sp) {
+				display: block;
+			}
+		}
+		dt {
+			width: 20%;
+			padding: 1em 0;
+			border-bottom: 1px solid $line;
+			font-weight: bold;
+			@media screen and (max-width: $bp-sp) {
+				width: 100%;
+				border: none;
+				padding: .5em 0 .3em;
+			}
+		}
+		dd {
+			width: 80%;
+			padding: 1em 0;
+			border-bottom: 1px solid $line;
+			@media screen and (max-width: $bp-sp) {
+				width: 100%;
+				padding: 0 0 .5em;
+			}
+		}
+	}
+ }
+
+ #mypage_setting {
+	h4 {
+		margin-bottom: 1em;
+	}
+	.setting_area {
+		display: flex;
+		flex-wrap: wrap;
+		row-gap: 16px;
+		margin-bottom: 40px;
+		li {
+			display: flex;
+			align-items: center;
+			font-size: 1.4rem;
+			width: 100%;
+			a {
+				margin-left: auto;
+			}
+			.text_box {
+				display: flex;
+				width: 90%;
+				@media screen and (max-width: $bp-sp) {
+					display: block;
+				}
+			}
+			.setting_title {
+				width: 20%;
+				@media screen and (max-width: $bp-sp) {
+					width: 100%;
+					margin-bottom: .5em;
+				}
+			}
+			.setting_text {
+				width: 80%;
+				@media screen and (max-width: $bp-sp) {
+					width: 100%;
+				}
+			}
+		}
+	}
+	.address {
+		background: $white;
+		padding: 16px;
+		margin-bottom: 8px;
+		&_title {
+			border-bottom: 1px solid $line;
+			padding-bottom: .5em;
+			margin-bottom: 1em;
+		}
+		p {
+			margin-bottom: 1em;
+		}
+		.links {
+			font-size: 1.2rem;
+		}
+	}
+	.address_add {
+		button {
+			border: none;
+			background: none;
+		}
+	}
+	.new_form {
+		ul {
+			margin: 24px 0 16px;
+			width: 70%;
+			@media screen and (max-width: $bp-sp) {
+				width: 100%;
+				margin: 16px 0 8px;
+			}
+			li {
+				&:not(:last-child) {
+					margin-bottom: 12px;
+				}
+			}
+		}
+		button {
+			@media screen and (max-width: $bp-sp) {
+				font-size: 1.4rem;
+			}
+		}
+
+	}
+ }

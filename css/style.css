@@ -285,6 +285,8 @@ a.links,
 button.links {
   color: #0058D0;
   text-decoration: underline;
+  border: none;
+  background: none;
 }
 
 a:hover, button:hover {
@@ -522,12 +524,8 @@ h3 {
 }
 h3.return {
   margin-bottom: 1em;
-}
-@media screen and (max-width: 834px) {
-  h3.return {
-    background: url(../img/arrow_l_gray.svg) no-repeat 0 center/12px auto;
-    padding-left: 2em;
-  }
+  background: url(../img/arrow_l_gray.svg) no-repeat 0 center/12px auto;
+  padding-left: 2em;
 }
 
 h4 {
@@ -731,6 +729,7 @@ p {
   display: inline-block;
   width: 300px;
   text-align: center;
+  border: none;
 }
 @media screen and (max-width: 834px) {
   .btn_bg_circle_green {
@@ -4368,5 +4367,277 @@ footer .bottom small {
   #delivery dl dt {
     font-size: 1.4rem;
     margin-top: 24px;
+  }
+}
+
+#faq dl {
+  max-width: 800px;
+  margin: 64px auto 80px;
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+@media screen and (max-width: 834px) {
+  #faq dl {
+    max-width: 90%;
+  }
+}
+#faq dl dt {
+  background: url(../img/arrow_b_gray.svg) no-repeat right center/16px auto;
+  padding-left: 3rem;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+@media screen and (max-width: 834px) {
+  #faq dl dt {
+    background: url(../img/arrow_b_gray.svg) no-repeat right center/12px auto;
+  }
+}
+#faq dl dt.active {
+  background: url(../img/arrow_t_gray.svg) no-repeat right center/16px auto;
+}
+@media screen and (max-width: 834px) {
+  #faq dl dt.active {
+    background: url(../img/arrow_t_gray.svg) no-repeat right center/12px auto;
+  }
+}
+#faq dl dt::before {
+  content: "";
+  background: url(../img/icon_q.svg) no-repeat 0 0/contain;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#faq dl dd {
+  padding-bottom: 40px;
+  display: none;
+}
+
+#contact .contact_area {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 0 80px;
+}
+@media screen and (max-width: 834px) {
+  #contact .contact_area {
+    max-width: 90%;
+  }
+}
+#contact .contact_area > p {
+  margin-bottom: 3em;
+}
+#contact ul {
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 834px) {
+  #contact ul {
+    margin-bottom: 24px;
+  }
+}
+#contact li {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 834px) {
+  #contact li {
+    display: block;
+  }
+}
+#contact li .title {
+  width: 18%;
+  margin-right: 5%;
+  font-weight: bold;
+}
+@media screen and (max-width: 834px) {
+  #contact li .title {
+    width: 100%;
+    margin: 0 0 8px;
+  }
+}
+#contact li input,
+#contact li textarea {
+  width: 77%;
+}
+@media screen and (max-width: 834px) {
+  #contact li input,
+  #contact li textarea {
+    width: 100%;
+  }
+}
+#contact li input.short,
+#contact li textarea.short {
+  width: 40%;
+}
+@media screen and (max-width: 834px) {
+  #contact li input.short,
+  #contact li textarea.short {
+    width: 100%;
+  }
+}
+#contact li p {
+  width: 77%;
+  margin-left: auto;
+  margin-top: 1em;
+}
+@media screen and (max-width: 834px) {
+  #contact li p {
+    width: 100%;
+  }
+}
+#contact p.center {
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 834px) {
+  #contact p.center {
+    text-align: left;
+  }
+}
+#contact .thanks {
+  margin: 24px 0 40px;
+}
+
+#terms .terms_area {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 0 80px;
+}
+@media screen and (max-width: 834px) {
+  #terms .terms_area {
+    max-width: 90%;
+  }
+}
+
+#company .company_area {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 0 80px;
+}
+@media screen and (max-width: 834px) {
+  #company .company_area {
+    max-width: 90%;
+  }
+}
+#company .company_area dl {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.4rem;
+  border-top: 1px solid #ccc;
+  line-height: 1.5;
+}
+@media screen and (max-width: 834px) {
+  #company .company_area dl {
+    display: block;
+  }
+}
+#company .company_area dt {
+  width: 20%;
+  padding: 1em 0;
+  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+}
+@media screen and (max-width: 834px) {
+  #company .company_area dt {
+    width: 100%;
+    border: none;
+    padding: 0.5em 0 0.3em;
+  }
+}
+#company .company_area dd {
+  width: 80%;
+  padding: 1em 0;
+  border-bottom: 1px solid #ccc;
+}
+@media screen and (max-width: 834px) {
+  #company .company_area dd {
+    width: 100%;
+    padding: 0 0 0.5em;
+  }
+}
+
+#mypage_setting h4 {
+  margin-bottom: 1em;
+}
+#mypage_setting .setting_area {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 16px;
+  margin-bottom: 40px;
+}
+#mypage_setting .setting_area li {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  width: 100%;
+}
+#mypage_setting .setting_area li a {
+  margin-left: auto;
+}
+#mypage_setting .setting_area li .text_box {
+  display: flex;
+  width: 90%;
+}
+@media screen and (max-width: 834px) {
+  #mypage_setting .setting_area li .text_box {
+    display: block;
+  }
+}
+#mypage_setting .setting_area li .setting_title {
+  width: 20%;
+}
+@media screen and (max-width: 834px) {
+  #mypage_setting .setting_area li .setting_title {
+    width: 100%;
+    margin-bottom: 0.5em;
+  }
+}
+#mypage_setting .setting_area li .setting_text {
+  width: 80%;
+}
+@media screen and (max-width: 834px) {
+  #mypage_setting .setting_area li .setting_text {
+    width: 100%;
+  }
+}
+#mypage_setting .address {
+  background: white;
+  padding: 16px;
+  margin-bottom: 8px;
+}
+#mypage_setting .address_title {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+}
+#mypage_setting .address p {
+  margin-bottom: 1em;
+}
+#mypage_setting .address .links {
+  font-size: 1.2rem;
+}
+#mypage_setting .address_add button {
+  border: none;
+  background: none;
+}
+#mypage_setting .new_form ul {
+  margin: 24px 0 16px;
+  width: 70%;
+}
+@media screen and (max-width: 834px) {
+  #mypage_setting .new_form ul {
+    width: 100%;
+    margin: 16px 0 8px;
+  }
+}
+#mypage_setting .new_form ul li:not(:last-child) {
+  margin-bottom: 12px;
+}
+@media screen and (max-width: 834px) {
+  #mypage_setting .new_form button {
+    font-size: 1.4rem;
   }
 }/*# sourceMappingURL=style.css.map */
