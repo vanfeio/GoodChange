@@ -4536,10 +4536,10 @@ footer .bottom small {
 #contact .checkbox input {
   margin-right: 8px;
 }
-#contact .btn_bg_circle_green {
+#contact .btn_submit {
   background: #aaa;
 }
-#contact .btn_bg_circle_green.active {
+#contact .btn_submit.active {
   background: #4DB2A4;
 }
 
