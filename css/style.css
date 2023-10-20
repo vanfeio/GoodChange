@@ -4527,6 +4527,21 @@ footer .bottom small {
 #contact .thanks {
   margin: 24px 0 40px;
 }
+#contact .checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+#contact .checkbox input {
+  margin-right: 8px;
+}
+#contact .btn_bg_circle_green {
+  background: #aaa;
+}
+#contact .btn_bg_circle_green.active {
+  background: #4DB2A4;
+}
 
 #terms .terms_area {
   max-width: 800px;

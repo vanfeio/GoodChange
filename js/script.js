@@ -124,6 +124,18 @@ $(function () {
 		$(this).next().slideToggle();
 		$(this).toggleClass("active");
 	});
+
+
+	$('#contact #checkbox').change(function() {
+		let $btn = $(this);
+		contactbtn = $('#contact .btn_bg_circle_green');
+		if ($btn.prop('checked')) {
+			contactbtn.addClass('active');
+		} else {
+			contactbtn.removeClass('active');
+		} 
+	});
+ 
 });
 
 

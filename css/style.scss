@@ -3987,6 +3987,21 @@ footer {
 	.thanks {
 		margin: 24px 0 40px;
 	}
+	.checkbox {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 32px;
+		input {
+			margin-right: 8px;
+		}
+	}
+	.btn_bg_circle_green {
+		background: $gray;
+		&.active {
+			background: $green;
+		}
+	}
 }
 
  #terms {
