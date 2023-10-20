@@ -11,10 +11,10 @@
 	<meta name="robots" content="noindex">
 	<meta name="googlebot" content="noindex">
 
-	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/style.css?var01">
 
 	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-	<script type="text/javascript" src="./js/script.js"></script>
+	<script type="text/javascript" src="./js/script.js?var01"></script>
 </head>
 
 <body>
@@ -35,7 +35,7 @@
 						<li>
 							<div class="title">性別<sup>※</sup></div>
 							<div class="pref textbox_g">
-								<select name="性別">
+								<select name="性別" id="input_gender">
 									<option value="">選択する</option>
 									<option value="1">内容</option>
 									<option value="2">内容</option>
@@ -45,11 +45,11 @@
 						</li>
 						<li>
 							<div class="title">名前<sup>※</sup></div>
-							<input required type="name" class="textbox_g" placeholder="名前" />
+							<input id="input_name" required type="name" class="textbox_g" placeholder="名前" />
 						</li>
 						<li>
 							<div class="title">メールアドレス<sup>※</sup></div>
-							<input required type="email" class="textbox_g" placeholder="メールアドレス" />
+							<input id="input_mail" required type="email" class="textbox_g" placeholder="メールアドレス" />
 							<p>※ドメイン指定などの受信制限を設定されている場合は、下記ドメインからのメールが受信できるよう事前に設定を行ってください。「good-change.com」</p>
 						</li>
 						<li>
@@ -59,13 +59,13 @@
 						
 						<li>
 							<div class="title">お問い合わせ内容<sup>※</sup></div>
-							<textarea required cols="50" rows="5" class="textbox_g"
+							<textarea id="input_text" required cols="50" rows="5" class="textbox_g"
 								placeholder="お問い合わせ内容を記入してください"></textarea>
 						</li>
 					</ul>
-					<p class="checkbox"><input type="checkbox" id="checkbox"/><a href="terms.html" class="links" target="_blank">利用規約</a>・<a href="porcy.html" class="links" target="_blank">プライバシーポリシー</a>に同意する。</p>
+					<p class="checkbox"><input id="input_check" type="checkbox" required/><a href="terms.html" class="links" target="_blank">利用規約</a>・<a href="porcy.html" class="links" target="_blank">プライバシーポリシー</a>に同意する。</p>
 
-					<div class="center"><input type="submit" value="同意して送信する" class="btn_bg_circle_green btn_submit" /></div>
+					<div class="center"><input id="sending" type="submit" value="同意して送信する" class="btn_bg_circle_green" /></div>
 				</form>
 		
 		</div>

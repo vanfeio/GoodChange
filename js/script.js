@@ -126,14 +126,22 @@ $(function () {
 	});
 
 
-	$('#contact #checkbox').change(function() {
-		let $btn = $(this);
-		contactbtn = $('#contact .btn_bg_circle_green');
-		if ($btn.prop('checked')) {
-			contactbtn.addClass('active');
-		} else {
-			contactbtn.removeClass('active');
-		} 
+	//お問い合わせ - 全部入力するとactive
+	$('#sending').prop("disabled", true);
+
+	$("[id^= input]").change(function () {
+		let send = true;
+		$("[id^= input]").each(function(index) {
+		  if ($("[id^= input]").eq(index).val() === "") {
+			send = false;
+		  }
+		});
+		if (send) {
+			$('#sending').prop("disabled", false);
+		}
+		else {
+			$('#sending').prop("disabled", true);
+		}
 	});
  
 });

@@ -3996,11 +3996,11 @@ footer {
 			margin-right: 8px;
 		}
 	}
-	.btn_submit {
+	input[type=submit]:disabled {
 		background: $gray;
-		&.active {
-			background: $green;
-		}
+	}
+	.btn_submit {
+		
 	}
 }
 

@@ -4536,13 +4536,9 @@ footer .bottom small {
 #contact .checkbox input {
   margin-right: 8px;
 }
-#contact .btn_submit {
+#contact input[type=submit]:disabled {
   background: #aaa;
 }
-#contact .btn_submit.active {
-  background: #4DB2A4;
-}
-
 #terms .terms_area {
   max-width: 800px;
   margin: 0 auto;
