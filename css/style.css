@@ -4924,4 +4924,44 @@ footer .bottom small {
   #profile_edit .new_form button {
     font-size: 1.4rem;
   }
+}
+
+#lagel .lagel_area {
+  padding: 40px 0 80px;
+}
+#lagel .lagel_area dl {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.4rem;
+  border-top: 1px solid #ccc;
+  line-height: 1.5;
+}
+@media screen and (max-width: 834px) {
+  #lagel .lagel_area dl {
+    display: block;
+  }
+}
+#lagel .lagel_area dt {
+  width: 26%;
+  padding: 1em 0;
+  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+}
+@media screen and (max-width: 834px) {
+  #lagel .lagel_area dt {
+    width: 100%;
+    border: none;
+    padding: 0.5em 0 0.3em;
+  }
+}
+#lagel .lagel_area dd {
+  width: 74%;
+  padding: 1em 0;
+  border-bottom: 1px solid #ccc;
+}
+@media screen and (max-width: 834px) {
+  #lagel .lagel_area dd {
+    width: 100%;
+    padding: 0 0 0.5em;
+  }
 }/*# sourceMappingURL=style.css.map */

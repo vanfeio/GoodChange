@@ -4348,3 +4348,39 @@ footer {
 		}
 	}
  }
+
+ #lagel {
+	.lagel_area {
+		padding: 40px 0 80px;
+		dl {
+			display: flex;
+			flex-wrap: wrap;
+			font-size: 1.4rem;
+			border-top: 1px solid $line;
+			line-height: 1.5;
+			@media screen and (max-width: $bp-sp) {
+				display: block;
+			}
+		}
+		dt {
+			width: 26%;
+			padding: 1em 0;
+			border-bottom: 1px solid $line;
+			font-weight: bold;
+			@media screen and (max-width: $bp-sp) {
+				width: 100%;
+				border: none;
+				padding: .5em 0 .3em;
+			}
+		}
+		dd {
+			width: 74%;
+			padding: 1em 0;
+			border-bottom: 1px solid $line;
+			@media screen and (max-width: $bp-sp) {
+				width: 100%;
+				padding: 0 0 .5em;
+			}
+		}
+	}
+ }
