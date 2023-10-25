@@ -3815,32 +3815,46 @@ footer {
 		background: $yellow;
 		margin-top: 24px;
 		.main_container {
-			max-width: 800px;
+			max-width: 1000px;
 			margin: 0 auto;
 			padding: 40px 0;
 			display: flex;
+			align-items: center;
+			justify-content: center;
 			@media screen and (max-width: $bp-sp) {
 				max-width: 90%;
 				padding: 24px 0;
-				display: block;
+				flex-wrap: wrap;
 			}
 		}
 		.img {
 			@media screen and (max-width: $bp-sp) {
-				width: 160px;
-				margin: 0 auto 32px;
+				max-width: 90%;
+				margin-top: 32px;
+				order: 2;
 			}
 		}
 		.text {
-			width: 80%;
-			margin-left: 40px;
+			width: 60%;
+			margin-left: 70px;
 			@media screen and (max-width: $bp-sp) {
 				width: 100%;
 				margin-left: 0;
+				order: 1;
+			}
+			.lead {
+				font-size: 1.8rem;
+				margin-bottom: .5em;
+				@media screen and (max-width: $bp-sp) {
+					font-size: 1.6rem;
+				}
 			}
 			h3 {
-				border-bottom: 2px solid $black;
+				background: $green;
+				color: $white;
 				width: 100%;
+				padding: 8px;
+				margin-bottom: .5em;
 			}
 			.box {
 				background: $white;
@@ -3851,8 +3865,7 @@ footer {
 					display: block;
 				}
 				span {
-					display: block;
-					font-size: 1.6rem;
+					font-size: 1.8rem;
 					
 				}
 			}

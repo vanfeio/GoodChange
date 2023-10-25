@@ -4327,37 +4327,53 @@ footer .bottom small {
   margin-top: 24px;
 }
 #delivery .delivery_main .main_container {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 40px 0;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media screen and (max-width: 834px) {
   #delivery .delivery_main .main_container {
     max-width: 90%;
     padding: 24px 0;
-    display: block;
+    flex-wrap: wrap;
   }
 }
 @media screen and (max-width: 834px) {
   #delivery .delivery_main .img {
-    width: 160px;
-    margin: 0 auto 32px;
+    max-width: 90%;
+    margin-top: 32px;
+    order: 2;
   }
 }
 #delivery .delivery_main .text {
-  width: 80%;
-  margin-left: 40px;
+  width: 60%;
+  margin-left: 70px;
 }
 @media screen and (max-width: 834px) {
   #delivery .delivery_main .text {
     width: 100%;
     margin-left: 0;
+    order: 1;
+  }
+}
+#delivery .delivery_main .text .lead {
+  font-size: 1.8rem;
+  margin-bottom: 0.5em;
+}
+@media screen and (max-width: 834px) {
+  #delivery .delivery_main .text .lead {
+    font-size: 1.6rem;
   }
 }
 #delivery .delivery_main .text h3 {
-  border-bottom: 2px solid #333;
+  background: #4DB2A4;
+  color: white;
   width: 100%;
+  padding: 8px;
+  margin-bottom: 0.5em;
 }
 #delivery .delivery_main .text .box {
   background: white;
@@ -4371,8 +4387,7 @@ footer .bottom small {
   }
 }
 #delivery .delivery_main .text .box span {
-  display: block;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 #delivery dl {
   max-width: 800px;
