@@ -5011,6 +5011,8 @@ footer .bottom small {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
 }
 #feature .feature_main .text {
   width: 50%;
