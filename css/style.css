@@ -3875,6 +3875,17 @@ footer .bottom small {
     right: 2px;
   }
 }
+#item_detail .btn_bg_circle_red {
+  margin-left: 0;
+  padding: 24px 64px;
+  min-height: auto;
+}
+@media screen and (max-width: 834px) {
+  #item_detail .btn_bg_circle_red {
+    width: 100%;
+    font-size: 1.8rem;
+  }
+}
 #item_detail .detail_area {
   display: flex;
   justify-content: space-between;

@@ -3427,6 +3427,15 @@ footer {
 			right: 2px;
 		}
 	}
+	.btn_bg_circle_red {
+		margin-left: 0;
+		padding: 24px 64px;
+		min-height: auto;
+		@media screen and (max-width: $bp-sp) {
+			width: 100%;
+			font-size: 1.8rem;
+		}
+	}
 	.detail_area {
 		display: flex;
 		justify-content: space-between;
