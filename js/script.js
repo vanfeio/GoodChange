@@ -23,26 +23,6 @@ $(function () {
 		$(".beginner_modal").fadeOut(200);
 	});
 
-	// カテゴリー選択モーダル
-	var open = $('#category_open'),
-		close = $('.category_close'),
-		container = $('.category_area');
-
-	open.on('click', function () {
-		container.addClass('active');
-		return false;
-	});
-
-	close.on('click', function () {
-		container.removeClass('active');
-	});
-
-	$(document).on('click', function (e) {
-		if (!$(e.target).closest('.category_area .modal_container').length) {
-			container.removeClass('active');
-		}
-	});
-
 	//カテゴリtoggle
 	$('.parent').click(function () {
 		$(this).next('ul').slideToggle('fast');
@@ -163,4 +143,24 @@ $(function () {
 });
 
 
+$(function () {
+	// カテゴリー選択モーダル
+	var open = $('.wanted_modal_open'),
+		close = $('.wanted_modal_close'),
+		container = $('.wanted_modal');
 
+	open.on('click', function () {
+		container.addClass('active');
+		return false;
+	});
+
+	close.on('click', function () {
+		container.removeClass('active');
+	});
+
+	$(document).on('click', function (e) {
+		if (!$(e.target).closest('.wanted_modal .modal_container').length) {
+			container.removeClass('active');
+		}
+	});
+});

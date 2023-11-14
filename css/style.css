@@ -2107,6 +2107,7 @@ footer .bottom small {
 
 .modal_container {
   min-width: 640px;
+  max-width: 840px;
   padding: 64px 32px;
   background: white;
   position: relative;
@@ -2115,10 +2116,91 @@ footer .bottom small {
 @media screen and (max-width: 834px) {
   .modal_container {
     min-width: auto;
+    max-width: auto;
     width: 90%;
     margin: 0 auto;
     padding: 32px 24px;
   }
+}
+
+.wanted_modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 999;
+}
+.wanted_modal:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+.wanted_modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+.wanted_modal .modal_container {
+  position: absolute;
+  left: 25%;
+  top: 30%;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+@media screen and (max-width: 834px) {
+  .wanted_modal .modal_container {
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+}
+.wanted_modal .modal_container .wanted_modal_close {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  cursor: pointer;
+}
+.wanted_modal .modal_container .wanted_list {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #ccc;
+}
+@media screen and (max-width: 834px) {
+  .wanted_modal .modal_container .wanted_list {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+  }
+}
+.wanted_modal .modal_container .wanted_list .img {
+  width: 20%;
+  margin-right: 4%;
+}
+.wanted_modal .modal_container .wanted_list .text {
+  width: 76%;
+}
+.wanted_modal .modal_container .wanted_list .item_name {
+  margin-bottom: 1em;
+  font-weight: bold;
+  line-height: 1.5;
+}
+.wanted_modal .modal_container .wanted_list .btn {
+  display: flex;
+  -moz-column-gap: 4px;
+       column-gap: 4px;
+}
+.wanted_modal .modal_container .wanted_list .btn a {
+  font-size: 1.4rem;
 }
 
 #category .category_area {
@@ -2213,6 +2295,12 @@ footer .bottom small {
 }
 #category .category_area .modal_container .child01.open span.list {
   background: url(../img/arrow_t_gray.svg) no-repeat right 8px center/12px auto;
+}
+#category .category_area .modal_container .wanted_list {
+  display: flex;
+  align-items: center;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #ccc;
 }
 
 .mypage_area > .container {
