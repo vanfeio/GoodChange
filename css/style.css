@@ -2148,7 +2148,7 @@ footer .bottom small {
 }
 .wanted_modal .modal_container {
   position: absolute;
-  left: 25%;
+  left: 22%;
   top: 30%;
   max-height: 500px;
   overflow-y: scroll;
